@@ -1,0 +1,117 @@
+*{
+    box-sizing: border-box;   /* Medir todas las cajas que esten dentro del marco*/
+}
+
+body{
+    margin: 0;
+    padding: 2rem 1rem;
+    font-family: "poppins", Arial, sans-serif;
+    background-color: #f3f0ff;
+    color: #24213a;
+}
+
+.tarjeta{
+    max-width: 360px; /* que no crezca mas de 360 pixeles */
+    margin: 0 auto; /* Centrar un elemento */
+    padding: 2rem;
+    border: 1px solid #ded8f2;
+    border-radius: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 16px rgba(36, 33, 58, 0.14);
+    text-align: center;    
+}
+
+.avatar{
+    width: 96px;
+    height: 96;
+    margin: 0 auto 1rem;
+    border-radius: 50%;
+    background-color: #fce7a8;
+    font-size: 3rem;
+    line-height: 96px; /* Centra el emoji en vertical */
+}
+
+#nombre{
+    margin: 0;
+    font-size: 1.6rem; 
+}
+
+.rol{
+    margin: 0.25rem 0;
+    color: #6d3fd1;
+    font-weight: 600;
+}
+
+.ciudad{
+    margin: 0 0 1.5rem;
+    color: #66627a;
+}
+
+h2{
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+}
+
+.habilidades{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1.5rem;
+}
+
+.habilidades li{
+    display: inline-block; /* organiza fila */
+    margin: 0.25rem;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background-color: #e5ddff;
+    color: #49318a;
+    font-size: 0.9rem;
+}
+
+.boton{
+    padding: 0.7rem 1.2rem;
+    border: 2px solid #235789;
+    border-radius: 8px;
+    background-color: #235789;
+    color: #fff;
+    font: inherit;
+    cursor: pointer;
+}
+
+.boton:hover{
+    background-color: #17416b;
+}
+
+.boton:focus-visible{
+    outline: 3px solid #d97706;
+    outline-offset: 3px;
+}
+
+body.oscuro{
+    background-color: #151326;
+    color: #f4f1ff;
+}
+
+body.oscuro .tarjeta{
+    background-color: #24213a;
+    border-color: #403b5c;
+    box-shadow: none;
+}
+
+body.oscuro .rol{
+    color: #ffcf70;
+}
+
+body.oscuro .ciudad{
+    color: #c5bfdc;
+}
+
+body.oscuro .habilidades li{
+    background-color: #3b315e;
+    color: #e8ddff;
+}
+
+.oculto{
+    display: none;
+}
