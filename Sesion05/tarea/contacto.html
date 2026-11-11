@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lluvia de Hamburguesas El Gaitán - Contacto</title>
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="img/logo.jpg" alt="Logo de Lluvia de Hamburguesas El Gaitán">
+        <h1>Lluvia de Hamburguesas El Gaitán</h1>
+        <nav>
+            <a href="index.html">Inicio 🏠</a>
+            <a href="producto.html">Menú 🛒</a>
+            <a href="contacto.html">Contacto 📲</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Contáctanos y haz tu pedido</h2>
+            <ul>
+                <li>Nos encontramos ubicados cerca al <strong>Parque Gaitán (Medellín - Manrique)</strong>.</li>
+                <li>Nuestro horario de atención es: <strong>Lunes a jueves 7:00 P. M. - 11:00 P. M. y Viernes a Domingo y Festivos de 6:00 P.M. - 3:00 A.M.</strong></li>
+            </ul>
+            <form class="formulario-contacto">
+                <div class="campo">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo</label>
+                    <input type="email" id="correo" name="correo" required>
+                </div>
+                <div class="campo">
+                    <label for="celular">Celular</label>
+                    <input type="tel" id="celular" name="celular">
+                </div>
+                <div class="campo">
+                    <label for="motivo">Motivo</label>
+                    <select id="motivo" name="motivo" required>
+                        <option value="" disabled selected>Selecciona un motivo</option>
+                        <option value="pedido">Pedido a domicilio</option>
+                        <option value="pregunta">Pregunta sobre el menú</option>
+                        <option value="queja">Queja o sugerencia</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>2026 - Lluvia de Hamburguesas El Gaitán - Manrique, Medellín</p>
+        <p>
+            <a href="https://wa.me/573127266765" target="_blank">
+                <img class="icono-whatsapp" src="img/WhatsApp.png" alt="">
+                Escríbenos por WhatsApp
+            </a>
+        </p>
+    </footer>
+
+    <!-- El atributo name identifica cada dato para que el navegador pueda enviarlo al procesar el formulario. -->
+</body>
+
+</html>

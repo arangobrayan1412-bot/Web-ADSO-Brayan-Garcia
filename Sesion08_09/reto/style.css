@@ -1,0 +1,197 @@
+/* ========== 1. VARIABLES ========== */
+:root {
+    --fondo: #fffaf0;
+    --superficie: #ffffff;
+    --texto: #1f2933;
+    --texto-suave: #52606d;
+    --acento: #d97706;
+    --acento-hover: #b45309;
+    --boton-texto: #ffffff;
+    --tarjeta-fondo: #fef3c7;
+    --sombra: 0 2px 8px rgba(0, 0, 0, 0.08);
+    --radio: 12px;
+}
+
+/* ========== 2. BASE Y RESET ========== */
+* { 
+    box-sizing: border-box; 
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--fondo);
+    color: var(--texto);
+}
+
+/* ========== 3. TEMA OSCURO (Redefine únicamente variables) ========== */
+body.oscuro {
+    --fondo: #111827;
+    --superficie: #1f2937;
+    --texto: #e5e7eb;
+    --texto-suave: #9ca3af;
+    --acento: #fbbf24;
+    --acento-hover: #f59e0b;
+    --boton-texto: #1f2933;
+    --tarjeta-fondo: #374151;
+    --sombra: none;
+}
+
+/* ========== 4. COMPONENTES Y DISEÑO (Mobile First) ========== */
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Encabezado: Menú en columna en celular por defecto */
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: var(--superficie);
+    box-shadow: var(--sombra);
+}
+
+.logo {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu a {
+    color: var(--acento);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/* Portada / Hero (Mobile) */
+.hero {
+    display: grid;
+    gap: 1.5rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2rem; 
+    line-height: 1.2;
+}
+
+.hero img {
+    border-radius: 16px;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+/* Beneficios en Grid (1 columna en celular) */
+.beneficios {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+
+.beneficio {
+    padding: 1.25rem;
+    border-radius: var(--radio);
+    background-color: var(--tarjeta-fondo);
+}
+
+/* Botón interactivo */
+.boton {
+    display: inline-block;
+    padding: 0.8rem 1.4rem;
+    border-radius: 999px;
+    background-color: var(--acento);
+    color: var(--boton-texto);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.boton:hover {
+    background-color: var(--acento-hover);
+    transform: translateY(-2px);
+}
+
+/* ========== 5. ANIMACIONES Y TRANSICIONES ========== */
+body, .encabezado, .beneficio {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@keyframes aparecer {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== 6. MEDIA QUERIES (Tableta y Escritorio) ========== */
+/* A partir de 768px (Tableta) */
+@media (min-width: 768px) {
+    .encabezado {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 2rem;
+    }
+
+    .beneficios { 
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        text-align: left;
+        animation: aparecer 0.6s ease-out;
+    }
+
+    .hero h1 { 
+        font-size: 2.8rem; 
+    }
+
+    .hero img {
+        max-width: 100%;
+    }
+}
+
+/* A partir de 1024px (Escritorio) */
+@media (min-width: 1024px) {
+    .beneficios { 
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ========== 7. PREFERS-REDUCED-MOTION (Accesibilidad) ========== */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

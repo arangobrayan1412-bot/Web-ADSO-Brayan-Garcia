@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lluvia de Hamburguesas El Gaitán · Sabor artesanal a domicilio</title>
+    <meta name="description" content="Hamburguesas artesanales de carne 100% a la parrilla en el barrio El Gaitán, Medellín. Pide a domicilio por WhatsApp.">
+    
+    <!-- Open Graph (OG) meta tags -->
+    <meta property="og:title" content="Lluvia de Hamburguesas El Gaitán">
+    <meta property="og:description" content="Las mejores hamburguesas artesanales de El Gaitán directo a tu puerta.">
+    <meta property="og:image" content="https://usuario.github.io/web-adso-nombreapellido/img/hamburguesa.webp">
+    <meta property="og:url" content="https://usuario.github.io/web-adso-nombreapellido/Sesion11/Reto/">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='14' font-size='14'>🍔</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <p class="logo">🍔 Lluvia de Hamburguesas</p>
+        <nav>
+            <ul class="menu">
+                <li><a href="#beneficios">Menú</a></li>
+                <li><a href="#como-funciona">Nosotros</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero contenedor">
+            <div>
+                <h1>Las mejores hamburguesas artesanales de El Gaitán</h1>
+                <p>Carne 100% a la parrilla, pan artesanal y salsas de la casa directo a tu puerta.</p>
+                <a href="https://wa.me/573127266765" class="boton">Pedir por WhatsApp</a>
+                <a href="#promo" class="boton" style="margin-left: 0.5rem; background-color: transparent; border: 2px solid var(--acento); color: var(--acento);">Ver promoción</a>
+            </div>
+            <img src="img/hamburguesa.webp" alt="Hamburguesa artesanal jugosa con papas" width="1200" height="750" loading="lazy">
+        </section>
+
+        <section class="contenedor" id="beneficios">
+            <h2>Nuestras especialidades</h2>
+            <div class="beneficios">
+                <article class="beneficio">
+                    <span class="insignia insignia-nuevo">Nuevo</span>
+                    <h3>🔥 La Clásica El Gaitán</h3>
+                    <p>Doble carne, queso cheddar fundido, tocineta crujiente y vegetales frescos.</p>
+                </article>
+                <article class="beneficio">
+                    <span class="insignia insignia-oferta">Oferta</span>
+                    <h3>🚚 Domicilio Rápido</h3>
+                    <p>Entregamos calientes y en tiempo récord en todo el sector y alrededores.</p>
+                </article>
+                <article class="beneficio">
+                    <h3>🌱 Ingredientes 100% Frescos</h3>
+                    <p>Pan artesanal del día y cortes de carne seleccionados sin aditivos.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="contenedor pie" id="contacto" style="padding: 2rem 1rem; text-align: center;">
+        <p>Barrio El Gaitán, Medellín | Tel / WhatsApp: 312 726 6765</p>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a class="whatsapp-flotante" href="https://wa.me/573127266765" aria-label="Escríbenos por WhatsApp">💬</a>
+
+    <!-- Ventana Modal de Promoción -->
+    <div id="promo" class="modal" role="dialog" aria-modal="true" aria-labelledby="promo-titulo">
+        <div class="modal-caja">
+            <a href="#" class="modal-cerrar" aria-label="Cerrar">×</a>
+            <h2 id="promo-titulo">🎉 Combo 2x1 este fin de semana</h2>
+            <p>Pide una Clásica El Gaitán y llévate la segunda a mitad de precio por WhatsApp.</p>
+            <a class="boton" href="https://wa.me/573127266765">Pedir promoción ahora</a>
+        </div>
+    </div>
+</body>
+</html>
